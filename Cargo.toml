@@ -1,0 +1,10 @@
+[package]
+name = "log-upload"
+version = "0.1.0"
+authors = [ "Sam Henson <sam@ranger.is>" ]
+
+[dependencies]
+tempdir = "*"
+
+[dependencies.aws]
+git = "https://github.com/samhenson/aws-rs.git"
