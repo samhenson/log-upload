@@ -1,0 +1,7 @@
+language: rust
+script: cargo build --verbose && ./tests/test_upload.sh
+before_install:
+        - pip install --user python-dateutil
+        - wget -O ${HOME}/s3cmd-1.5.2.tar.gz https://github.com/s3tools/s3cmd/releases/download/v1.5.2/s3cmd-1.5.2.tar.gz
+        - tar -C ${HOME} -xaf ${HOME}/s3cmd-1.5.2.tar.gz
+env: PATH=${HOME}/s3cmd-1.5.2:${PATH}
